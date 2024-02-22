@@ -25,12 +25,16 @@
       android:id="@+id/create_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+
       android:hint="Enter Task"
+      android:textColorHint="#8F8888"
+      android:textColor="@color/white"
       android:textSize="20sp"
+
       app:layout_constraintTop_toBottomOf="@id/Head"
       app:layout_constraintStart_toStartOf="@id/Head"
       app:layout_constraintEnd_toEndOf="@id/Head"
-      android:textColorHint="#DAD4D4"
+
       android:fontFamily="sans-serif"
       android:background="@drawable/edit_text"
       android:paddingStart="20dp"
@@ -42,12 +46,16 @@
       android:id="@+id/create_priority"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+
       android:hint="Priority"
+      android:textColorHint="#8F8888"
       android:textSize="20sp"
+      android:textColor="@color/white"
+
       app:layout_constraintTop_toBottomOf="@id/create_title"
       app:layout_constraintStart_toStartOf="@id/Head"
       app:layout_constraintEnd_toEndOf="@id/Head"
-      android:textColorHint="#DAD4D4"
+
       android:fontFamily="sans-serif"
       android:background="@drawable/edit_text"
       android:paddingStart="20dp"

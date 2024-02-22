@@ -29,11 +29,12 @@
         app:layout_constraintTop_toBottomOf="@id/Head"
         app:layout_constraintStart_toStartOf="@id/Head"
         app:layout_constraintEnd_toEndOf="@id/Head"
-        android:textColorHint="#DAD4D4"
+        android:textColorHint="#8F8888"
         android:fontFamily="sans-serif"
         android:background="@drawable/edit_text"
         android:paddingStart="20dp"
         android:layout_marginTop="30dp"
+        android:textColor="@color/white"
 
         />
 
@@ -46,11 +47,12 @@
         app:layout_constraintTop_toBottomOf="@id/create_title"
         app:layout_constraintStart_toStartOf="@id/Head"
         app:layout_constraintEnd_toEndOf="@id/Head"
-        android:textColorHint="#DAD4D4"
+        android:textColorHint="#8F8888"
         android:fontFamily="sans-serif"
         android:background="@drawable/edit_text"
         android:paddingStart="20dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/white"
 
         />
 

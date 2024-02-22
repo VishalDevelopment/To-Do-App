@@ -16,17 +16,20 @@
        app:layout_constraintTop_toTopOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       android:layout_margin="10dp"
+       android:padding="18dp"
+       android:layout_marginTop="10dp"
        >
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textSize="40sp"
-           android:fontFamily="sans-serif"
+           android:fontFamily="sans-serif-black"
            android:text="Your Task"
+
            android:layout_weight="1"
-           android:textColor="@color/white"/>
+           android:textColor="@color/white"
+           />
        <androidx.appcompat.widget.AppCompatButton
            android:id="@+id/deleteAll"
            android:layout_width="50dp"
@@ -36,7 +39,7 @@
            android:text="X"
 
            android:textSize="22sp"
-           android:background="#FF2F00"
+           android:background="#FFD740"
            />
 
    </LinearLayout>
@@ -50,7 +53,8 @@
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintBottom_toBottomOf="parent"
            tools:listitem="@layout/view"
-           android:layout_marginTop="15dp"
+
+           android:layout_marginBottom="2dp"
            />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

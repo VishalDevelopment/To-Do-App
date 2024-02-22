@@ -5,41 +5,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <LinearLayout
-        android:id="@+id/myLayout"
+
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="10dp"
-        android:padding="7dp"
-        android:background="@color/black"
+        app:cardCornerRadius="10dp"
         >
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Task will go here"
-            android:textSize="25sp"
-            android:textColor="@color/white"
-            style="@style/TextAppearance.AppCompat.Headline"
+        <LinearLayout
+            android:id="@+id/myLayout"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
 
-            />
+            android:background="@color/black"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Task will go here"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:fontFamily="sans-serif-condensed-medium"
+                />
 
-        <TextView
-            android:id="@+id/priority"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Priority : high"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            style="@style/TextAppearance.AppCompat.Subhead"
+            <TextView
+                android:id="@+id/priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority : high"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:fontFamily="sans-serif-condensed"
 
-            />
-    </LinearLayout>
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,9 +11,10 @@ import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import kotlinx.coroutines.NonDisposableHandle.parent
 import java.util.Locale
 
-class MyAdapter(var context: Context, var dataList: List<cardInfo>) :
+class MyAdapter( var dataList: List<cardInfo>) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -24,7 +25,7 @@ class MyAdapter(var context: Context, var dataList: List<cardInfo>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var itemView = LayoutInflater.from(context)
+        var itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.view, parent, false)
 
         return ViewHolder(itemView)
@@ -47,11 +48,9 @@ class MyAdapter(var context: Context, var dataList: List<cardInfo>) :
         holder.priority.text = dataList[position].priority
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(context,update_detail::class.java)
+            val intent = Intent(holder.itemView.context ,update_detail::class.java)
             intent.putExtra("id",position)
-
-
-            context.startActivity(intent)
+          holder.itemView.context.startActivity(intent)
         }
     }
 

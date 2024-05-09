@@ -8,13 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.doit.Activities.UpdateCard
+import com.example.doit.RoomDb.ToDOEntity
 import kotlinx.coroutines.NonDisposableHandle.parent
+import kotlinx.coroutines.currentCoroutineContext
 import java.util.Locale
+import kotlin.coroutines.coroutineContext
 
-class MyAdapter( var dataList: List<cardInfo>) :
+class MyAdapter( var dataList: List<ToDOEntity>) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -48,8 +53,8 @@ class MyAdapter( var dataList: List<cardInfo>) :
         holder.priority.text = dataList[position].priority
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context ,update_detail::class.java)
-            intent.putExtra("id",position)
+            val intent = Intent(holder.itemView.context ,UpdateCard::class.java)
+            intent.putExtra("IDDATA",dataList[position].id.toString())
           holder.itemView.context.startActivity(intent)
         }
     }
